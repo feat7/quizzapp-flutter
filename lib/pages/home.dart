@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../model/picture.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -25,15 +27,11 @@ class _HomePageState extends State<HomePage> {
                     children: <Widget>[
                       Flexible(
                         flex: 1,
-                        child: Container(
-                            color: Colors.blue
-                        ),
+                        child: Image.network(allPictures[0].imageURL)
                       ),
                       Flexible(
                         flex: 1,
-                        child: Container(
-                          color: Colors.greenAccent,
-                        ),
+                        child: Image.network(allPictures[1].imageURL)
                       )
                     ],
                   ),
@@ -44,15 +42,11 @@ class _HomePageState extends State<HomePage> {
                     children: <Widget>[
                       Flexible(
                         flex: 1,
-                        child: Container(
-                            color: Colors.red
-                        ),
+                        child: Image.network(allPictures[2].imageURL)
                       ),
                       Flexible(
                         flex: 1,
-                        child: Container(
-                          color: Colors.yellowAccent,
-                        ),
+                        child: Image.network(allPictures[3].imageURL)
                       )
                     ],
                   ),

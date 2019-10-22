@@ -6,11 +6,11 @@ class Picture {
   List<String> keywords;
 
   Picture({this.imageURL, this.keywords}){
-    for (String keyword in this.keywords){
-      Set<Picture> pictureSet = keywordMap[keyword] == null ? new Set<Picture>() : keywordMap[keyword];
-      pictureSet.add(this);
-      keywordMap.update(keyword, (value) => pictureSet);
-    }
+//    for (String keyword in this.keywords){
+//      Set<Picture> pictureSet = keywordMap[keyword] == null ? new Set<Picture>() : keywordMap[keyword];
+//      pictureSet.add(this);
+//      keywordMap.update(keyword, (value) => pictureSet);
+//    }
   }
 }
 

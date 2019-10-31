@@ -9,7 +9,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  
+	
   List<String> _letters = new List<String>();
   List<String> _unusedLetters = PictureManager().getPicture(2).letters;
   String _answer = PictureManager().getPicture(2).answer;
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                             _letters[number] = '';
                           }
                           if (_letters[_letters.length - 1] != '')
-                            PictureManager().next();
+                            PictureManager();
                         });
                       },
                       child: SizedBox(
@@ -201,6 +201,12 @@ class _HomePageState extends State<HomePage> {
               )
             ],
           ),
+					FlatButton(
+						onPressed: () {
+							Navigator.pushNamed(context, '/new');
+						},
+						child: Text('New'),
+					)
         ],
       ),
     );
